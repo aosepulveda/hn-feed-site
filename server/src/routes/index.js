@@ -13,4 +13,6 @@ router.get('/status', (req, res) => {
   return res.status(HttpStatus.OK).json({ message: 'OK' });
 });
 
+setInterval(feedHandler.loadFeedsData, 6000);
+
 module.exports = router;

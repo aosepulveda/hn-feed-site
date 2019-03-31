@@ -2,6 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const Boom = require('boom');
 const cors = require('cors')
+const mongoose = require('mongoose');
 
 const logger = require('./src/tools/logger');
 
@@ -32,6 +33,19 @@ app.use((err, req, res) => {
   res.status(err.status || 500);
   res.json({ error: err.message });
 });
+
+// connect to mongodb
+mongoose
+  .connect(
+    process.env.FEEDS_MONGO_DB_CONNECTION_STRING,
+    { useNewUrlParser: true },
+  )
+  .then(() => {
+    logger.info('Connected to database!');
+  })
+  .catch(e => {
+    logger.error('Unable to connect to database!', e);
+  });
 
 logger.info('Server is running!!');
 module.exports = app;

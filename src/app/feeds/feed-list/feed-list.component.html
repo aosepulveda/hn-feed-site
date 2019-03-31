@@ -1,6 +1,6 @@
 <mat-spinner *ngIf="isLoading"></mat-spinner>
 <mat-list *ngIf="feeds.length > 0 && !isLoading">
-  <mat-list-item class="feed-row" *ngFor="let feed of feeds">
+  <a mat-list-item class="feed-row" *ngFor="let feed of feeds" href="{{feed.url}}" target="_blank">
     <h3 matLine>
       {{ feed.title }} <span class="author"> - {{ feed.author }} </span>
       <span class="created-at">{{ feed.createdAt | date }} </span>
@@ -9,7 +9,7 @@
     <button mat-icon-button color="warn" (click)="onDelete(feed.id)">
       <mat-icon>delete</mat-icon>
     </button>
-  </mat-list-item>
+  </a>
 </mat-list>
 <p class="info-text mat-body-1" *ngIf="feeds.length <= 0 && !isLoading">
   No feeds added yet!
