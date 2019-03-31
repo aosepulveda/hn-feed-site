@@ -15,10 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FeedListComponent } from './feeds/feed-list/feed-list.component';
+import { DateFormatPipe } from './feeds/feed-list/dateformat.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DateFormatPipe,
     HeaderComponent,
     FeedListComponent
   ],

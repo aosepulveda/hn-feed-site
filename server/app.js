@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const Boom = require('boom');
-const cors = require('cors')
+const cors = require('cors');
 const mongoose = require('mongoose');
 
 const logger = require('./src/tools/logger');

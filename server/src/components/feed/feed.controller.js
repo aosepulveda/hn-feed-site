@@ -23,6 +23,7 @@ module.exports = {
             createdAt: feed.created_at,
             author: feed.author,
             url: feed.story_url ? feed.story_url : feed.url,
+            deleted: false,
           }),
         );
 
@@ -42,7 +43,7 @@ module.exports = {
     try {
       // const feedData = await axios.get(process.env.FEED_DATA_URI);
       // const { hits } = await feedData.data;
-      const hits = await Feed.find({ deleted: false });
+      const hits = await Feed.find({ deleted: false }).sort('-createdAt');
       if (!hits) {
         return res.status(HttpStatus.NOT_FOUND).json(Boom.notFound('feeds not found'));
       }

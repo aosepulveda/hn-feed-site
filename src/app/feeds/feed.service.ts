@@ -34,9 +34,7 @@ export class FeedService {
     console.log(id);
     this.http.delete('http://localhost:3000/feeds/' + id)
       .subscribe(() => {
-        console.log('asd');
         const updatedFeeds = this.feeds.filter(feed => feed.id !== id);
-        console.log(updatedFeeds);
         this.feeds = updatedFeeds;
         this.feedsUpdated.next([...this.feeds]);
       });

@@ -1,3 +1,20 @@
+.loading-spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.feed-list {
+  margin: 20px;
+}
+
 .feed-row {
   background-color: #fff;
   border-top: 1px #ccc solid;
@@ -5,11 +22,24 @@
   border-right: 1px #ccc solid;
   color: #333;
   font-size: 13pt;
+  font-family: "Lato", serif, sans-serif;
+}
+
+.feed-row:last-child {
+  border-bottom: 1px #ccc solid;
+}
+
+.author-link {
   text-decoration: none;
+  color: black;
 }
 
 .feed-row:hover {
   background-color: #fafafa;
+  .delete-button {
+    background-color: #fafafa;
+    visibility: visible;
+  }
 }
 
 .author {
@@ -20,4 +50,9 @@
 .created-at {
   float: right;
   padding-right: 20px;
+}
+
+.delete-button {
+  visibility: hidden;
+  border: none;
 }

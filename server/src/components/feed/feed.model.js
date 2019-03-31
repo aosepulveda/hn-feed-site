@@ -7,7 +7,7 @@ const feedSchema = mongoose.Schema({
   createdAt: { type: Date, required: true },
   author: { type: String, required: true },
   url: { type: String, required: true },
-  deleted: { type: Boolean, required: false }
+  deleted: { type: Boolean, required: false },
 });
 
 // export model

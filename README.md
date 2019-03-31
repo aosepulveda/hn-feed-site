@@ -1,27 +1,28 @@
-# Hnfeed
+# Hnfeed PoC Site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+This site is an example created on Angular 7 - Express - MongoDB.
 
-## Development server
+## How to run it
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For running this project you need to run two projects (Server and Web).
 
-## Code scaffolding
+### Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before of all please add a file .env on folder server with secret data. Then...
 
-## Build
+On your terminal, inside folder.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+cd server
+yarn install
+yarn start
+```
 
-## Running unit tests
+### Web
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+On your terminal, inside folder.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+npm install
+ng serve
+```
