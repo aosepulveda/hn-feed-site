@@ -2,7 +2,7 @@
 <mat-list class="feed-list" *ngIf="feeds.length > 0 && !isLoading">
   <mat-list-item class="feed-row" *ngFor="let feed of feeds">
     <a class="author-link" matLine  href="{{feed.url}}" target="_blank">
-      {{ feed.title }} <span class="author"> - {{ feed.author }} </span>
+      {{ feed.title }} <span class="author"> - {{ feed.author }} - </span>
       <span class="created-at">{{ feed.createdAt | dateFormat }} </span>
     </a>
 

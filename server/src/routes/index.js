@@ -7,6 +7,7 @@ const feedHandler = require('./../components/feed');
 
 router.get('/feeds', feedHandler.get);
 router.delete('/feeds/:feedId', feedHandler.deleteFeed);
+router.get('/reset', feedHandler.reset);
 
 // for server liveness probe
 router.get('/status', (req, res) => {
