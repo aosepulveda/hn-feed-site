@@ -1,0 +1,22 @@
+.feed-row {
+  background-color: #fff;
+  border-top: 1px #ccc solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  color: #333;
+  font-size: 13pt;
+}
+
+.feed-row:hover {
+  background-color: #fafafa;
+}
+
+.author {
+  color: #999;
+  padding-left: 6px;
+}
+
+.created-at {
+  float: right;
+  padding-right: 20px;
+}
